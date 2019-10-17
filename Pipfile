@@ -11,6 +11,9 @@ flask-sqlalchemy = "*"
 tweepy = "*"
 basilica = "*"
 python-decouple = "*"
+python-dotenv = "*"
+scikit-learn = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
