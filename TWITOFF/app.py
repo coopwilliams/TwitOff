@@ -11,7 +11,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
-    app.config['ENV'] = config('ENV') #change this in production
+    # app.config['ENV'] = config('ENV') #change this in production
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     DB.init_app(app)
