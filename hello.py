@@ -5,7 +5,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 # routes determine location
-@app.route("/")
+# @app.route("/")
 
 # define a simple function
 def home():
