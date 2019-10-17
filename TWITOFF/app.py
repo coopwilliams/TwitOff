@@ -24,14 +24,14 @@ def create_app():
     @app.route('/user', methods=['POST'])
     @app.route('/user/<name>', methods=['GET'])
     def user(name=None, message=''):
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace() # debugger
         message = ''
         name = name or request.values['user_name']
         try:
             if request.method == "POST":
                 add_or_update_user(name)
                 message = 'User {} successfully added!'.format(name)
-            tweets = User.query.filter(User.name == name).one().Tweets
+            tweets = User.query.filter(User.name == name).one().tweets
         except Exception as e:
             message = 'Error adding {}: {}'.format(name, e)
             tweets = []

@@ -6,13 +6,13 @@
 
   <body>
     <h1> twitoff app </h1>
-    <p> Placeholder for content </p>
 
-    <ul>
-      {% for user in users %}
-      <li>{{ user.name }} </li>
-      {% endfor %}
-    </ul>
+    {% block content %}
+    <form action="/user" method="post">
+      <input type="text" name="user_name" placeholder="User to add">
+      <input type="submit" value="Add User">
+    </form>
+    {% endblock %}
 
   </body>
 
