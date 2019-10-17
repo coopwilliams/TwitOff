@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+<html>
+  <head>
+    <title> Twitoff! {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+  </head>
+{% block content %}
+<div id="prediction">
+  <h2>{{ title }}</h2>
+  <p>{{ message }}</p>
+</div>
+{% endblock %}

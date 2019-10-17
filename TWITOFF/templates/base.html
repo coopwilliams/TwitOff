@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title> Twitoff! {{ title }}</title>
+    <title> Twitoff! {{ title }}</title>
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
   </head>
 
   <body>
@@ -12,6 +13,22 @@
       <input type="text" name="user_name" placeholder="User to add">
       <input type="submit" value="Add User">
     </form>
+
+    <form action="/compare" method="post">
+      <select name="user1">
+        {% for user in users %}
+        <option value="{{ user.name }}">{{ user.name }}</option>
+        {% endfor %}
+      </select>
+      <select name="user2">
+        {% for user in users %}
+        <option value="{{ user.name }}">{{ user.name }}</option>
+        {% endfor %}
+      </select>
+      <input type="text" name="tweet_text" placeholder="Tweet to predict">
+      <input type="submit" value="Compare Users">
+    </form>
+
     {% endblock %}
 
   </body>
